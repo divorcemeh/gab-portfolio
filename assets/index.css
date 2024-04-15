@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background: #eff4fd;
+
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+nav {
+    background-color: #000;
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 30px;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 10px 0;
+    padding: 0 40px 0 50px;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+nav ul li a:hover{
+    color: #B68D40;
+}
+
+.logo-li {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    max-width: 120px;
+    max-height: 50px;
+}
+
+.tech {
+    height: 200px;
+    width: 200px;
+}
+
+
+.text {
+    color: #B68D40;
+}
+
+.greet {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 60px;
+}
+
+#about {
+    position: absolute;
+    width: 350px;
+    top: 70%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: justify;
+    font-size: 20px;
+}
+
+.contact {
+    position: absolute;
+    top: 90%;
+    left: 20%;
+    transform: translateX(-50%);
+    background-color: #B68D40;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact:hover {
+    background-color: #A77B35;
+}
+
+.about {
+    position: absolute;
+    top: 90%;
+    left: 30%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.about:hover {
+    background-color: #A77B35;
+}
+
+.images {
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    top: 20%;
+    left: 80%;
+    transform: translateX(-50%);
+}
+
+.images img {
+    height: 100%;
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+#hobbies, #skills, #projects {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+
+.menu-icon {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+#menu-toggle:checked + nav {
+    display: block;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#education {
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+.timeline {
+    position: relative;
+}
+
+.branch {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #ccc;
+}
+
+.branch::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+.event {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.event h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.event p {
+    margin-bottom: 5px;
+}
+
+.connector {
+    position: absolute;
+    width: 2px;
+    background-color: #ccc;
+    left: 50%;
+}
+
+.event .connector {
+    height: 100%;
+    top: 0;
+}
+
+.event .connector::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -1px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+.college,
+.secondary,
+.pre-school {
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.elementary,
+.tertiary {
+    left: 30%;
+    transform: translateX(100%);
+}
+
+#hobbies {
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.timeline {
+    position: relative;
+}
+
+.timeline ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.timeline ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.timeline ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #ccc;
+}
+
+.timeline ul li:last-child::before {
+    height: 50%; 
+}
+
+.timeline ul li:last-child {
+    margin-bottom: 0;
+}
+
+.container img {
+    width: 100px;
+    height: 100px;
+}
+
+/* CSS */
+.tech-stack {
+    display: flex;
+    justify-content: center;
+}
+
+.adobe,
+.html {
+    display: flex;
+    align-items: center; 
+    margin-right: 20px;
+}
+
+.adobe img,
+.html img {
+    margin-right: 10px;
+    height: 80px;
+    width: 80px;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    width: 100px; 
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-menu li:last-child {
+    margin-right: 0;
+}
+
+.footer-menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+}
+
+
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+
+.footer-social a:hover {
+    color: #ccc;
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
+
+.footer-logos {
+    width: 150px;
+    height: 150px;
+}
+
+
+@media (max-width: 768px) {
+    .greet {
+        font-size: 40px; 
+    }
+    
+    .images {
+        left: 50%; 
+    }
+
+    nav {
+        display: none;
+    }
+
+    .text {
+        color: #B68D40;
+    }
+    
+    .greet {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .logo {
+        max-width: 100px;
+        max-height: 40px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .shape {
+        width: 400px;
+        height: 400px;
+    }
+}
