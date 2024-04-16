@@ -51,31 +51,31 @@
                     <h3>College</h3>
                     <p>2023 - Present</p>
                     <p>Address of college education.</p>
-                    <div class="connector-right"></div> <!-- Updated class name -->
+                    <div class="connector-right"></div>
                 </div>
                 <div class="event tertiary">
                     <h3>Tertiary Education</h3>
                     <p>2021 - 2023</p>
                     <p>Address of tertiary education.</p>
-                    <div class="connector-left"></div> <!-- Updated class name -->
+                    <div class="connector-left"></div>
                 </div>
                 <div class="event secondary">
                     <h3>Secondary School</h3>
                     <p>2017 - 2021</p>
                     <p>Address of secondary education.</p>
-                    <div class="connector-right"></div> <!-- Updated class name -->
+                    <div class="connector-right"></div>
                 </div>  
                 <div class="event elementary">
                     <h3>Elementary School</h3>
                     <p>2011 - 2017</p>
                     <p>Address of elementary education.</p>
-                    <div class="connector-left"></div> <!-- Updated class name -->
+                    <div class="connector-left"></div>
                 </div>
                 <div class="event pre-school">
                     <h3>Pre-school</h3>
                     <p>2010 - 2011</p>
                     <p>Address of pre-school education.</p>
-                    <div class="connector-right"></div> <!-- Updated class name -->
+                    <div class="connector-right"></div>
                 </div>
             </div>
         </div>
@@ -247,14 +247,12 @@
             slideIndex += n;
             const totalSlides = document.querySelectorAll('.container-carousel').length;
             
-            // Disable next button if on the last slide
             if (slideIndex >= totalSlides - 1) {
                 document.querySelector('.next').disabled = true;
             } else {
                 document.querySelector('.next').disabled = false;
             }
 
-            // Disable previous button if on the first slide
             if (slideIndex <= 0) {
                 document.querySelector('.prev').disabled = true;
             } else {
