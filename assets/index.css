@@ -6,12 +6,14 @@
 
 body{
     background: #eff4fd;
+    width: 100%;
+    overflow-x: hidden;
 
 }
 
 .hero {
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     text-align: center;
 }
@@ -45,7 +47,7 @@ nav ul li a {
     font-size: 12px;
 }
 
-nav ul li a:hover{
+ul li a:hover{
     color: #B68D40;
 }
 
@@ -138,7 +140,7 @@ nav ul li a:hover{
 }
 
 .images img {
-    height: 100%;
+    height: 400px;
     position: absolute;
     left: 40%;
     bottom: 0;
@@ -146,7 +148,7 @@ nav ul li a:hover{
     transition: bottom 1s, left 1s;
 }
 
-#hobbies, #skills, #projects {
+#hobbies, #projects {
     width: 90%;
     margin-left: 5%;
     margin-top: 5%;
@@ -178,6 +180,9 @@ nav ul li a:hover{
 
 .text-center {
     text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 #education {
@@ -195,7 +200,7 @@ nav ul li a:hover{
     top: 0;
     bottom: 0;
     width: 2px;
-    background-color: #ccc;
+    background-color: #B68D40;
 }
 
 .branch::after {
@@ -206,14 +211,14 @@ nav ul li a:hover{
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background-color: #ccc;
+    background-color: #B68D40;
 }
 
 .event {
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 10px;
-    background-color: #f0f0f0;
+    background-color: #B68D40;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
 }
@@ -229,14 +234,38 @@ nav ul li a:hover{
 
 .connector {
     position: absolute;
-    width: 2px;
+    height: 2px;
     background-color: #ccc;
-    left: 50%;
+    left: 50%;  
+    transform: translateX(-50%);
+    width: calc(100% + 2px); 
+    top: 50%;
+    transform: translateY(-1px); 
+}
+
+.connector-left {
+    position: absolute;
+    height: 2px;
+    background-color: #B68D40;
+    right: 100%;
+    transform: translateY(-1px);
+    width: calc(50% + 2px); 
+    top: 50%;
+}
+
+.connector-right {
+    position: absolute;
+    height: 2px;
+    background-color: #B68D40;
+    left: 100%; 
+    transform: translateY(-1px); 
+    width: calc(50% + 2px); 
+    top: 50%;
 }
 
 .event .connector {
-    height: 100%;
-    top: 0;
+    width: calc(100% - 40px); 
+    top: 20px; 
 }
 
 .event .connector::after {
@@ -259,7 +288,7 @@ nav ul li a:hover{
 
 .elementary,
 .tertiary {
-    left: 30%;
+    left: 0;
     transform: translateX(100%);
 }
 
@@ -305,34 +334,32 @@ nav ul li a:hover{
     margin-bottom: 0;
 }
 
-.container img {
-    width: 100px;
-    height: 100px;
-}
-
-/* CSS */
 .tech-stack {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly; 
+    flex-wrap: wrap; 
+    margin-bottom: 20px; 
+    width: 100%;
 }
 
 .adobe,
-.html {
+.html, .css {
     display: flex;
+    flex-direction: column;
     align-items: center; 
     margin-right: 20px;
+    margin-bottom: 20px; 
 }
 
 .adobe img,
-.html img {
+.html img, .css img {
     margin-right: 10px;
     height: 80px;
     width: 80px;
 }
 
-
 footer {
-    background-color: #333;
+    background-color: #B68D40;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -340,14 +367,14 @@ footer {
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 .footer-logo img {
-    width: 100px; 
+    width: 140px; 
 }
 
 .footer-menu {
@@ -370,6 +397,10 @@ footer {
     text-decoration: none;
 }
 
+.footer-menu li a:hover {
+    color: black;
+}
+
 .footer-social {
     display: flex;
     align-items: center;
@@ -377,31 +408,163 @@ footer {
 
 
 .footer-social a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 10px;
+    margin-right: 10px; 
+    display: inline-block; 
+    transition: transform 0.3s ease; 
 }
 
-
-.footer-social a:hover {
-    color: #ccc;
+.footer-social a i {
+    color: white; 
+    font-size: 24px; 
 }
+
+.footer-social a:hover i {
+    color: inherit;
+    transform: scale(1.5); 
+}
+
+.footer-social a:hover i.fa-facebook-f {
+    color: #3b5998;
+}
+
+.footer-social a:hover i.fa-github {
+    color: #000; 
+}
+
+.footer-social a:hover i.fa-instagram {
+    color: #e1306c;
+}
+
 
 .copyright {
     margin-top: 20px;
 }
 
+#projects {
+    text-align: center;
+}
 
-.footer-logos {
-    width: 150px;
-    height: 150px;
+.black-bg {
+    border-radius: 35px;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.container img {
+    width: 40%; 
+    height: 350px;
+}
+
+.description {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.description h4 {
+    margin-top: 0;
+    color: #333;
+}
+
+.description p {
+    margin-bottom: 0;
+    color: #666;
+}
+
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #B68D40;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: none; 
+}
+
+.scroll-top-btn i {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#skills {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.skill-item {
+    width: calc(33.33% - 20px); 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    color: #333;
+    box-sizing: border-box; 
+    margin: 10px; 
+}
+
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 400px;
+}
+
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.container-carousel {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+.carousel img {
+    width: 80%;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
 
 
 @media (max-width: 768px) {
-    .greet {
-        font-size: 40px; 
-    }
     
     .images {
         left: 50%; 
@@ -440,5 +603,47 @@ footer {
     .shape {
         width: 400px;
         height: 400px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-menu {
+        margin-top: 20px; 
+    }
+
+    .footer-menu li {
+        display: block; 
+        margin-right: 0;
+        margin-bottom: 10px; 
+    }
+
+    .footer-logo {
+       display: none;
+    }
+
+    .footer-social {
+        margin-top: 20px; 
+    }
+
+    .copyright {
+        margin-top: 20px; 
+    }
+
+    .footer-social a {
+        margin-right: 10px; 
+        margin-bottom: 10px; 
+    }
+
+    .adobe,
+    .html, .css {
+        margin-right: 0; 
+    }
+
+    .tech-stack {
+        justify-content: flex-start; 
     }
 }
