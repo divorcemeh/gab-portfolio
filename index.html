@@ -6,6 +6,7 @@
     <link rel="icon" href="assets/images/logo.png">
     <title>Portfolio - Gabrielle Banzon</title>
     <link rel="stylesheet" href="assets/index.css">
+    <!-- CDN for font-awesome. Logo for fb, insta and github -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -20,7 +21,7 @@
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#education">About</a></li>
                 <li><a href="#hobbies">Hobbies</a></li>
                 <li class="logo-li"><img src="assets/images/logo.png" alt="logo" class="logo"></li>
                 <li><a href="#skills">Skills</a></li>
@@ -49,32 +50,37 @@
                 <div class="event college">
                     <h3>College</h3>
                     <p>2023 - Present</p>
-                    <p>Description of college education.</p>
+                    <p>Address of college education.</p>
+                    <div class="connector-right"></div> <!-- Updated class name -->
                 </div>
                 <div class="event tertiary">
                     <h3>Tertiary Education</h3>
                     <p>2021 - 2023</p>
-                    <p>Description of tertiary education.</p>
+                    <p>Address of tertiary education.</p>
+                    <div class="connector-left"></div> <!-- Updated class name -->
                 </div>
                 <div class="event secondary">
                     <h3>Secondary School</h3>
                     <p>2017 - 2021</p>
-                    <p>Description of secondary education.</p>
+                    <p>Address of secondary education.</p>
+                    <div class="connector-right"></div> <!-- Updated class name -->
                 </div>  
                 <div class="event elementary">
                     <h3>Elementary School</h3>
                     <p>2011 - 2017</p>
-                    <p>Description of elementary education.</p>
+                    <p>Address of elementary education.</p>
+                    <div class="connector-left"></div> <!-- Updated class name -->
                 </div>
                 <div class="event pre-school">
                     <h3>Pre-school</h3>
-                    <p>2016 - 2017</p>
-                    <p>Description of pre-school education.</p>
+                    <p>2010 - 2011</p>
+                    <p>Address of pre-school education.</p>
+                    <div class="connector-right"></div> <!-- Updated class name -->
                 </div>
             </div>
         </div>
-
-
+        
+        
        <div class="btn">
         <button class="contact">Contact</button>
         <button class="about">Projects</button>
@@ -93,16 +99,33 @@
             </div>
         </div>
 
-        <div id="skills">
-            <h3 class="text-center">Skills</h3>
-            <ul>
-                <li>Graphic design using tools like Adobe Photoshop and Canva</li>
-                <li>Problem-solving and critical thinking</li>
-                <li>Effective communication and teamwork</li>
-                <li>Time management and organization</li>
-            </ul>
+        <h3 class="text-center">Skills</h3>
+
+        <div id="skills" class="container">
+            <div class="skill-item">
+                <i class="fa fa-paint-brush fa-spin"></i>
+                Graphic design
+            </div>
+            <div class="skill-item">
+                <i class="fa fa-cogs fa-spin"></i>
+                Problem-solving
+            </div>
+            <div class="skill-item">
+                <i class="fa fa-lightbulb-o fa-spin"></i>
+                Critical thinking
+            </div>
+            <div class="skill-item">
+                <i class="fa fa-users fa-spin"></i>
+                Team Collaboration
+            </div>
+            <div class="skill-item">
+                <i class="fa fa-clock-o fa-spin"></i>
+                Time management
+            </div>
+        </div>
+        
             
-            <h3 class="text-center">Technology used</h3>
+            <h3 class="text-center">Technology</h3>
             <div class="tech-stack">
                 <div class="adobe">
                     <img src="assets/images/adobe.png" alt="adobe" class="tech">
@@ -112,31 +135,70 @@
                     <img src="assets/images/html.png" alt="html" class="tech">
                     <span>HTML</span>
                 </div>
+
+                <div class="css">
+                    <img src="assets/images/css.png" alt="css" class="tech">
+                    <span>CSS</span>
+                </div>
             </div>
 
-        </div>
-        <div id="projects">
-            <h3 class="text-center">Recent Projects</h3>
-            
-            <div class="container">
-                <img src="assets/images/featured 1.JPG" alt="">
+        <h3 class="text-center">Recent Projects</h3>
+        <div class="black-bg">
+            <div id="projects" class="carousel">
+                <div class="slides">
+                    <div class="container-carousel">
+                        <img src="assets/images/featured 1.JPG" alt="">
+                        <div class="description">
+                            <h4>Description 1</h4>
+                            <p>This is the description for the first project.</p>
+                        </div>
+                    </div>
+                    <div class="container-carousel">
+                        <img src="assets/images/featured 2.JPG" alt="">
+                        <div class="description">
+                            <h4>Description 2</h4>
+                            <p>This is the description for the second project.</p>
+                        </div>
+                    </div>
+                    <div class="container-carousel">
+                        <img src="assets/images/featured 3.JPG" alt="">
+                        <div class="description">
+                            <h4>Description 3</h4>
+                            <p>This is the description for the first project.</p>
+                        </div>
+                    </div>
+                    <div class="container-carousel">
+                        <img src="assets/images/featured 4.JPG" alt="">
+                        <div class="description">
+                            <h4>Description 4</h4>
+                            <p>This is the description for the second project.</p>
+                        </div>
+                    </div>
+                    <div class="container-carousel">
+                        <img src="assets/images/featured logo 1.png" alt="">
+                        <div class="description">
+                            <h4>Description 5</h4>
+                            <p>This is the description for the first project.</p>
+                        </div>
+                    </div>
+                    <div class="container-carousel">
+                        <img src="assets/images/featured logo 2.png" alt="">
+                        <div class="description">
+                            <h4>Description 4</h4>
+                            <p>This is the description for the second project.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="button prev" onclick="moveSlide(-1)">Previous</button>
+                <button class="button next" onclick="moveSlide(1)">Next</button>
             </div>
-            <div class="container">
-                <img src="assets/images/featured 2.JPG" alt="">
-            </div>
-            <div class="container">
-                <img src="assets/images/featured 3.JPG" alt="">
-            </div>
-        </div>
-        <div id="contact">
-
         </div>
     </main>
     
-    <footer>
+    <footer id="contact" style="margin-top: 1000px;">
         <div class="footer-container">
             <div class="footer-logo">
-                <img src="assets/images/logo.png" alt="logo" class="footer-logos">
+                <img src="assets/images/logo.png" alt="logo">
             </div>
             <ul class="footer-menu">
                 <li><a href="#home">Home</a></li>
@@ -157,5 +219,58 @@
         </div>
     </footer>
     
+    <button id="scrollToTopBtn" class="scroll-top-btn" onclick="scrollToTop()"><i class="fa fa-arrow-up"></i></button>
+
+    <!-- Up button -->
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("scrollToTopBtn").style.display = "block";
+                } else {
+                    document.getElementById("scrollToTopBtn").style.display = "none";
+                }
+            }
+
+            function scrollToTop() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+    </script>
+
+    <!-- Carousel picture -->
+    <script>
+        let slideIndex = 0;
+
+        function moveSlide(n) {
+            slideIndex += n;
+            const totalSlides = document.querySelectorAll('.container-carousel').length;
+            
+            // Disable next button if on the last slide
+            if (slideIndex >= totalSlides - 1) {
+                document.querySelector('.next').disabled = true;
+            } else {
+                document.querySelector('.next').disabled = false;
+            }
+
+            // Disable previous button if on the first slide
+            if (slideIndex <= 0) {
+                document.querySelector('.prev').disabled = true;
+            } else {
+                document.querySelector('.prev').disabled = false;
+            }
+
+            showSlides();
+        }
+
+
+        function showSlides() {
+            const slides = document.querySelector('.slides');
+            const slideWidth = document.querySelector('.container').offsetWidth;
+            slides.style.transform = `translateX(${slideIndex * slideWidth}px)`; // Adjusted direction
+        }
+
+    </script>
 </body>
 </html>
