@@ -69,8 +69,8 @@ ul li a:hover{
 }
 
 
-.text {
-    color: #B68D40;
+span.text {
+    color: #B68D40;   
 }
 
 .greet {
@@ -148,6 +148,11 @@ ul li a:hover{
     transform: translateX(-50%);
     transition: bottom 1s, left 1s;
 }
+
+.profile {
+    top: 17%;
+}
+
 
 #hobbies {
     width: 90%;
@@ -529,7 +534,7 @@ footer {
   }
   
 .mySlides {
-display: none;
+    display: none;
 }
 
 .prev, .next {
@@ -556,8 +561,8 @@ display: none;
     background-color: rgba(0,0,0,0.8);
 }
 
-.text {
-    color: #f2f2f2;
+.texts {
+    color: red;
     font-size: 15px;
     padding: 8px 12px;
     position: absolute;
@@ -626,10 +631,6 @@ display: none;
         display: none;
     }
 
-    .text {
-        color: #B68D40;
-    }
-
     .images {
         width: 45%;
         height: 80%;
@@ -647,6 +648,10 @@ display: none;
         bottom: 0;
         transform: translateX(-50%);
         transition: bottom 1s, left 1s;
+    }
+
+    .profile {
+        top: 15%; 
     }
     
     .greet {
@@ -681,23 +686,14 @@ display: none;
     }
 
     #education {
-        max-width: 90%;
+        max-width: 80%;
         margin: 0 auto; 
         text-align: center;
         margin-top: 250px;
     }
 
-    .timeline {
-        margin: 0 auto;
-        width: 100%;
-    }
-
-    .branch {
-        left: 10px; 
-    }
-
     .event {
-        width: 90%; 
+        width: 80%; 
         margin-left: auto;
         margin-right: auto;
     }
@@ -711,19 +707,13 @@ display: none;
         font-size: 14px; 
     }
 
-    .connector,
-    .connector-left,
-    .connector-right {
-        width: calc(100% - 40px); 
-    }
-
     .college,
     .secondary,
     .pre-school,
     .elementary,
     .tertiary {
         transform: translateX(0); 
-        margin-left: 0;
+        margin-left: 10%;
     }
 
     .connector-left,
