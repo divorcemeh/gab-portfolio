@@ -11,10 +11,8 @@
 </head>
 <body>
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+    <label for="menu-toggle" class="menu-icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
     </label>
 
     <div class="hero">
@@ -228,33 +226,58 @@
 
     <!-- Up button and toggle navigation bar -->
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const menuToggle = document.getElementById("menu-toggle");
-            const navMenu = document.querySelector("nav ul");
 
-            menuToggle.addEventListener("change", function() {
-                if (this.checked) {
-                    navMenu.classList.add("active");
-                } else {
+        document.addEventListener("DOMContentLoaded", function() {
+            const navLinks = document.querySelectorAll("nav ul li a");
+            
+            navLinks.forEach(link => {
+                link.addEventListener("click", function() {
+                    const navMenu = document.querySelector("nav ul");
                     navMenu.classList.remove("active");
-                }
+                });
+            });
+
+            let timeout;
+            document.addEventListener("mousemove", function() {
+                clearTimeout(timeout);
+                const navMenu = document.querySelector("nav ul");
+                timeout = setTimeout(function() {
+                    navMenu.classList.remove("active");
+                }, 4000); 
+            });
+
+            window.addEventListener("scroll", function() {
+                const navMenu = document.querySelector("nav ul");
+                navMenu.classList.remove("active");
             });
         });
 
+
+        function myFunction() {
+            const menuToggle = document.getElementById("menu-toggle");
+            const navMenu = document.querySelector("nav ul");
+            if (navMenu.classList.contains("active")) {
+                navMenu.classList.remove("active"); 
+            } else {
+                navMenu.classList.add("active"); 
+            }
+        }
+
+        
         window.onscroll = function() {scrollFunction()};
 
-            function scrollFunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    document.getElementById("scrollToTopBtn").style.display = "block";
-                } else {
-                    document.getElementById("scrollToTopBtn").style.display = "none";
-                }
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("scrollToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("scrollToTopBtn").style.display = "none";
             }
+        }
 
-            function scrollToTop() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
     </script>
 
     <!-- Carousel picture -->
