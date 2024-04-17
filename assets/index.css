@@ -581,7 +581,7 @@ footer {
     padding: 8px 12px;
     position: absolute;
     top: 0;
-    left: 20%;
+    left: 25%;
 }
 
 .dot {
@@ -787,6 +787,15 @@ footer {
         transition: 0.6s ease;
         border-radius: 0 3px 3px 0;
         user-select: none;
+    }
+
+    .numbertext {
+        color: red;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        left: 20%;
     }
 
     .footer-container {
