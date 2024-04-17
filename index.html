@@ -81,7 +81,7 @@
         </div>
         
         
-       <div class="btn">
+       <div>
         <button class="contact">Contact</button>
         <button class="about">Projects</button>
        </div>
@@ -125,77 +125,83 @@
         </div>
         
             
+        <div class="bg-color">
             <h3 class="text-center">Technology</h3>
             <div class="tech-stack">
-                <div class="adobe">
+                <div class="adobe tec">
                     <img src="assets/images/adobe.png" alt="adobe" class="tech">
                     <span>Adobe Creative Suite</span>
                 </div>
-                <div class="html">
+                <div class="html tec">
                     <img src="assets/images/html.png" alt="html" class="tech">
                     <span>HTML</span>
                 </div>
 
-                <div class="css">
+                <div class="css tec">
                     <img src="assets/images/css.png" alt="css" class="tech">
                     <span>CSS</span>
                 </div>
             </div>
-
-        <h3 class="text-center">Recent Projects</h3>
-        <div class="black-bg">
-            <div id="projects" class="carousel">
-                <div class="slides">
-                    <div class="container-carousel">
-                        <img src="assets/images/featured 1.JPG" alt="">
-                        <div class="description">
-                            <h4>Description 1</h4>
-                            <p>This is the description for the first project.</p>
-                        </div>
-                    </div>
-                    <div class="container-carousel">
-                        <img src="assets/images/featured 2.JPG" alt="">
-                        <div class="description">
-                            <h4>Description 2</h4>
-                            <p>This is the description for the second project.</p>
-                        </div>
-                    </div>
-                    <div class="container-carousel">
-                        <img src="assets/images/featured 3.JPG" alt="">
-                        <div class="description">
-                            <h4>Description 3</h4>
-                            <p>This is the description for the first project.</p>
-                        </div>
-                    </div>
-                    <div class="container-carousel">
-                        <img src="assets/images/featured 4.JPG" alt="">
-                        <div class="description">
-                            <h4>Description 4</h4>
-                            <p>This is the description for the second project.</p>
-                        </div>
-                    </div>
-                    <div class="container-carousel">
-                        <img src="assets/images/featured logo 1.png" alt="">
-                        <div class="description">
-                            <h4>Description 5</h4>
-                            <p>This is the description for the first project.</p>
-                        </div>
-                    </div>
-                    <div class="container-carousel">
-                        <img src="assets/images/featured logo 2.png" alt="">
-                        <div class="description">
-                            <h4>Description 4</h4>
-                            <p>This is the description for the second project.</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="button prev" onclick="moveSlide(-1)">Previous</button>
-                <button class="button next" onclick="moveSlide(1)">Next</button>
-            </div>
         </div>
+
+       
+        <div class="slideshow-container" id="projects">
+            <h3 class="text-center">Recent Projects</h3>
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 6</div>
+              <img src="assets/images/featured 1.JPG" alt="" width="100%">
+              <div class="text">Caption Text</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 6</div>
+              <img src="assets/images/featured 2.JPG" alt="" width="100%">
+              <div class="text">Caption Two</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 6</div>
+              <img src="assets/images/featured 3.JPG" alt="" width="100%">
+              <div class="text">Caption Three</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 6</div>
+                <img src="assets/images/featured 4.JPG" alt="" width="100%">
+                <div class="text">Caption Three</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">5 / 6</div>
+                <img src="assets/images/featured logo 1.png" alt="" width="100%">
+                <div class="text">Caption Three</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">6 / 6</div>
+                <img src="assets/images/featured logo 2.png" alt="" width="100%">
+                <div class="text">Caption Three</div>
+              </div>
+          
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+
+          </div>
     </main>
     
-    <footer id="contact" style="margin-top: 1000px;">
+    <footer id="contact" style="margin-top: 200px;">
         <div class="footer-container">
             <div class="footer-logo">
                 <img src="assets/images/logo.png" alt="logo">
@@ -221,8 +227,21 @@
     
     <button id="scrollToTopBtn" class="scroll-top-btn" onclick="scrollToTop()"><i class="fa fa-arrow-up"></i></button>
 
-    <!-- Up button -->
+    <!-- Up button and toggle navigation bar -->
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.getElementById("menu-toggle");
+            const navMenu = document.querySelector("nav ul");
+
+            menuToggle.addEventListener("change", function() {
+                if (this.checked) {
+                    navMenu.classList.add("active");
+                } else {
+                    navMenu.classList.remove("active");
+                }
+            });
+        });
+
         window.onscroll = function() {scrollFunction()};
 
             function scrollFunction() {
@@ -241,32 +260,31 @@
 
     <!-- Carousel picture -->
     <script>
-        let slideIndex = 0;
+        let slideIndex = 1;
+        showSlides(slideIndex);
 
-        function moveSlide(n) {
-            slideIndex += n;
-            const totalSlides = document.querySelectorAll('.container-carousel').length;
-            
-            if (slideIndex >= totalSlides - 1) {
-                document.querySelector('.next').disabled = true;
-            } else {
-                document.querySelector('.next').disabled = false;
-            }
-
-            if (slideIndex <= 0) {
-                document.querySelector('.prev').disabled = true;
-            } else {
-                document.querySelector('.prev').disabled = false;
-            }
-
-            showSlides();
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
         }
 
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
 
-        function showSlides() {
-            const slides = document.querySelector('.slides');
-            const slideWidth = document.querySelector('.container').offsetWidth;
-            slides.style.transform = `translateX(${slideIndex * slideWidth}px)`; // Adjusted direction
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
         }
 
     </script>
