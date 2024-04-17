@@ -22,7 +22,7 @@ body{
 nav {
     background-color: #000;
     width: 90%;
-    margin: 20px auto;
+    margin: 5px auto;
     border-radius: 30px;
     text-align: center;
 }
@@ -166,21 +166,11 @@ span.text {
     top: 20px;
     right: 20px;
     cursor: pointer;
-}
-
-.menu-icon .bar {
-    width: 25px;
-    height: 3px;
-    background-color: black;
-    margin: 5px 0;
-}
-
-#menu-toggle:checked + nav {
-    display: block;
+    color: #B68D40;
 }
 
 .menu-toggle {
-    display: block;
+    visibility: hidden;
 }
 
 .text-center {
@@ -611,20 +601,35 @@ footer {
         left: 50%; 
     }
 
-    nav ul {
+    .hero nav ul {
         display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        z-index: 1000;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20px;  
     }
 
-    nav ul.active {
+    .hero nav ul.active {
         display: block;
+    }
+
+    .hero nav ul li {
+        margin: 20px 0;
+    }
+
+    .menu-icon:hover {
+        cursor: pointer;
     }
 
     .menu-icon {
+        z-index: 2000;
         display: block;
-    }
-
-    .logo-li {
-        display: none;
     }
 
     .logo-li {
